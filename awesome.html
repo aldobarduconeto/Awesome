@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Awesome cria aplicativos leves, intuitivos e focados na privacidade: sem contas online obrigatórias e sem pedir dados pessoais desnecessários. Conheça AwesomeSafe, AwesomeOrin e FeedFlow.">
+  <title>Awesome — Software, feito com intenção</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0b0d12;--panel:#11141c;--panel2:#151925;--text:#f4f6fb;--muted:#9ca5b7;--line:rgba(255,255,255,.1);--accent:#a6f36b;--accent2:#c8ff9e;--radius:24px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,rgba(166,243,107,.12),transparent 40%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:11px;font-size:19px;font-weight:750;letter-spacing:-.04em}.logo{width:34px;height:34px;border-radius:11px;background:var(--accent);color:#10150b;display:grid;place-items:center;font-weight:900;font-size:20px;box-shadow:0 0 32px rgba(166,243,107,.2)}
+    .navlinks{display:flex;gap:28px;align-items:center;color:var(--muted);font-size:13px}.navlinks a:hover,.textlink:hover{color:var(--accent)}
+    .github{padding:10px 15px;border:1px solid var(--line);border-radius:999px;color:var(--text);font-size:13px}
+    .hero{padding:108px 0 88px;text-align:center;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(166,243,107,.25);border-radius:999px;padding:7px 12px;color:var(--accent2);font-size:12px;letter-spacing:.04em;background:rgba(166,243,107,.05)}.dot{height:6px;width:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+    h1{font-size:clamp(44px,7.5vw,82px);line-height:1.02;letter-spacing:-.075em;max-width:850px;margin:27px auto 22px;font-weight:760}h1 span{color:var(--accent)}.hero p{max-width:590px;margin:0 auto;color:var(--muted);font-size:17px}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:12px;font-weight:700;font-size:13px;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#10150b}.secondary{border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .hero-art{width:min(720px,100%);margin:64px auto 0;border:1px solid var(--line);border-radius:22px;padding:18px;background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.012));box-shadow:0 30px 100px rgba(0,0,0,.25);text-align:left}.windowbar{display:flex;gap:6px;padding:0 0 16px;border-bottom:1px solid var(--line)}.windowbar i{width:7px;height:7px;border-radius:50%;background:#3c4351}.windowbar i:first-child{background:#fa7777}.windowbar i:nth-child(2){background:#f4c96a}.windowbar i:nth-child(3){background:#a6f36b}.art-content{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding-top:15px}.mini{min-height:132px;padding:17px;border:1px solid var(--line);border-radius:15px;background:rgba(12,15,21,.72)}.mini-icon{width:35px;height:35px;border-radius:11px;display:grid;place-items:center;background:rgba(166,243,107,.12);color:var(--accent);font-weight:800;margin-bottom:17px}.mini b{display:block;font-size:13px}.mini small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+    section{padding:72px 0}.section-top{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.kicker{color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.section-top h2{font-size:clamp(30px,4vw,43px);letter-spacing:-.055em;line-height:1.1;margin:10px 0 0}.section-top p{color:var(--muted);max-width:370px;font-size:14px;margin:0}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.project{padding:25px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(150deg,rgba(255,255,255,.045),rgba(255,255,255,.012));display:flex;flex-direction:column;min-height:300px;transition:border-color .2s,transform .2s}.project:hover{border-color:rgba(166,243,107,.38);transform:translateY(-4px)}.project-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}.app-icon{height:48px;width:48px;border-radius:15px;display:grid;place-items:center;font-size:23px;font-weight:800;background:#1b2230;color:var(--accent)}.tag{font-size:10px;padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}.project h3{font-size:21px;letter-spacing:-.04em;margin:0 0 8px}.project p{color:var(--muted);font-size:13px;margin:0 0 22px}.textlink{font-size:12px;font-weight:750;margin-top:auto;display:inline-flex;gap:8px;align-items:center;color:var(--text)}
+    .manifesto{border:1px solid var(--line);border-radius:28px;padding:clamp(28px,5vw,52px);display:grid;grid-template-columns:1fr 1fr;gap:40px;background:linear-gradient(120deg,rgba(166,243,107,.08),rgba(255,255,255,.015) 65%)}.manifesto h2{font-size:clamp(29px,4vw,42px);line-height:1.12;letter-spacing:-.055em;margin:12px 0}.manifesto p{color:var(--muted);font-size:14px;margin:0}.principles{display:grid;gap:18px;align-content:center}.principle{display:flex;gap:14px;align-items:flex-start}.check{height:25px;width:25px;flex:none;border-radius:8px;background:rgba(166,243,107,.13);display:grid;place-items:center;color:var(--accent);font-size:13px}.principle b{display:block;font-size:13px;margin-bottom:3px}.principle span{display:block;color:var(--muted);font-size:12px}
+    .cta{padding:70px 25px;text-align:center;border:1px solid var(--line);border-radius:28px;background:radial-gradient(ellipse at 50% 100%,rgba(166,243,107,.1),transparent 65%),var(--panel)}.cta h2{font-size:clamp(31px,4.5vw,48px);letter-spacing:-.06em;line-height:1.08;margin:12px auto;max-width:600px}.cta p{color:var(--muted);font-size:14px;margin:0 auto;max-width:470px}.cta .actions{margin-top:25px}
+    footer{padding:27px 0 35px;margin-top:60px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px}.footlinks{display:flex;gap:20px}
+    @media(max-width:760px){.nav{height:70px}.navlinks{gap:14px}.navlinks a:not(.github){display:none}.hero{padding:76px 0 55px}.hero p{font-size:15px}.hero-art{margin-top:42px}.art-content{grid-template-columns:1fr}.mini{min-height:0;display:flex;align-items:center;gap:13px;padding:12px}.mini-icon{margin:0;flex:none}.mini small{margin-top:2px}.section-top{display:block}.section-top p{margin-top:14px}.projects{grid-template-columns:1fr}.project{min-height:250px}.manifesto{grid-template-columns:1fr;gap:28px}.cta{padding:48px 20px}footer{align-items:flex-start;flex-direction:column}.footlinks{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#" aria-label="Awesome, início"><span class="logo">A</span> awesome<span style="color:var(--accent)">.</span></a>
+    <nav class="navlinks" aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a><a href="#filosofia">Nossa filosofia</a>
+      <a class="github" href="https://github.com/aldobarduconeto" target="_blank" rel="noreferrer">⌘ GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow"><span class="dot"></span> Leveza · Usabilidade · Privacidade</div>
+      <h1>Leve por natureza.<br><span>Privado por princípio.</span></h1>
+      <p>Aplicativos rápidos, intuitivos e feitos para respeitar você. Sem contas online obrigatórias, sem coleta desnecessária de dados pessoais e sem complicação.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projetos">Explore os projetos <span>↓</span></a>
+        <a class="btn secondary" href="https://github.com/aldobarduconeto" target="_blank" rel="noreferrer">Conheça no GitHub ↗</a>
+      </div>
+      <div class="hero-art" aria-label="Prévia ilustrativa dos três projetos Awesome">
+        <div class="windowbar"><i></i><i></i><i></i></div>
+        <div class="art-content">
+          <div class="mini"><div class="mini-icon">S</div><div><b>AwesomeSafe</b><small>Privacidade em foco</small></div></div>
+          <div class="mini"><div class="mini-icon">O</div><div><b>AwesomeOrin</b><small>Uma experiência mais leve</small></div></div>
+          <div class="mini"><div class="mini-icon">F</div><div><b>FeedFlow</b><small>Conteúdo no seu ritmo</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="wrap">
+      <div class="section-top">
+        <div><div class="kicker">O que estamos criando</div><h2>Três projetos.<br>Uma mesma intenção.</h2></div>
+        <p>Cada produto atende a uma necessidade diferente, com uma prioridade em comum: funcionar bem, ser fácil de usar e respeitar a privacidade de quem escolhe usá-lo.</p>
+      </div>
+      <div class="projects">
+        <article class="project">
+          <div class="project-head"><div class="app-icon">S</div><span class="tag">Privacidade</span></div>
+          <h3>AwesomeSafe</h3>
+          <p>Proteja seus arquivos com uma experiência direta e simples, mantendo o foco no controle do usuário.</p>
+          <a class="textlink" href="https://github.com/aldobarduconeto/AwesomeSafe" target="_blank" rel="noreferrer">Ver repositório <span>↗</span></a>
+        </article>
+        <article class="project">
+          <div class="project-head"><div class="app-icon">O</div><span class="tag">Produtividade</span></div>
+          <h3>AwesomeOrin</h3>
+          <p>Uma experiência moderna e objetiva, pensada para evitar excessos e manter o uso leve e prático.</p>
+          <a class="textlink" href="https://github.com/aldobarduconeto/AwesomeOrin" target="_blank" rel="noreferrer">Ver repositório <span>↗</span></a>
+        </article>
+        <article class="project">
+          <div class="project-head"><div class="app-icon">F</div><span class="tag">Leitura</span></div>
+          <h3>FeedFlow</h3>
+          <p>Acompanhe seus feeds e organize suas fontes em um só lugar, com leitura prática e sem distrações desnecessárias.</p>
+          <a class="textlink" href="https://github.com/aldobarduconeto/FeedFlow" target="_blank" rel="noreferrer">Ver repositório <span>↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="filosofia" class="wrap">
+      <div class="manifesto">
+        <div><div class="kicker">A filosofia Awesome</div><h2>Seus dados são seus.<br>O software não deve pesar.</h2><p>Acreditamos que bons aplicativos devem fazer bem o que se propõem, sem exigir mais do usuário do que o necessário. Por isso, priorizamos desempenho, interfaces claras e privacidade desde o início — sem contas online obrigatórias nem pedidos desnecessários de dados pessoais.</p></div>
+        <div class="principles">
+          <div class="principle"><div class="check">✓</div><div><b>Leves e eficientes</b><span>Recursos bem pensados, sem excesso de peso ou complexidade.</span></div></div>
+          <div class="principle"><div class="check">✓</div><div><b>Usabilidade em primeiro lugar</b><span>Interfaces intuitivas para você fazer o que precisa com menos esforço.</span></div></div>
+          <div class="principle"><div class="check">✓</div><div><b>Privacidade por padrão</b><span>Sem contas online obrigatórias e sem solicitar dados pessoais desnecessários.</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="cta">
+        <div class="kicker">Tecnologia a serviço das pessoas</div>
+        <h2>Mais controle para você. Menos dados seus por aí.</h2>
+        <p>Conheça os projetos, explore o código e acompanhe um ecossistema que valoriza aplicativos leves, fáceis de usar e respeitosos com a sua privacidade.</p>
+        <div class="actions"><a class="btn primary" href="https://github.com/aldobarduconeto" target="_blank" rel="noreferrer">Acesse nosso GitHub ↗</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <a class="brand" href="#"><span class="logo">A</span> awesome<span style="color:var(--accent)">.</span></a>
+    <span>Feito com intenção. © <span id="year">2026</span> Awesome.</span>
+    <div class="footlinks"><a href="#projetos">Projetos</a><a href="https://github.com/aldobarduconeto" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
